@@ -1,24 +1,43 @@
 # Learning and Exploring the Hardware Dataflow Design Space through DDIM
 
-This repository contains the implementation of **XXX**. The accompanying paper is titled [_"Learning and Exploring the Hardware Dataflow Design Space through DDIM"_](path/to/paper).
+This repository contains the official implementation of:
+> **Learning and Exploring the Hardware Dataflow Design Space through DDIM**
 
-## Features
-- **Unified Co-Search Framework**: Supports the co-design of CNNs and ViTs with corresponding hardware accelerators.
-- **Zero-Shot Performance Evaluation**: Efficient neural network performance estimation without the need for full training.
-- **Heterogeneous Accelerator Search**: Explores multi-core hardware configurations for optimal latency and energy efficiency.
-- **Two-Stage Optimization**:
-  - **Stage 1**: Neural architecture evaluation and selection using zero-shot metrics.
-  - **Stage 2**: Hardware accelerator parameter search.
+The project proposes a **Denoising Diffusion Implicit Model (DDIM)** based framework for efficient hardware dataflow Design Space Exploration (DSE). Given a DNN workload and the number of processing elements (PEs), the proposed method generates high-performance dataflow configurations by learning the distribution of high-quality dataflows.
 
-## Requirements
-To set up the environment, ensure you have the following installed:
-- Python 3.9
-- PyTorch (version 1.12.1)
-- CUDA Toolkit
+## Environment
 
-## Getting Started
-## Step 1: Clone the Repository
+The experiments were conducted with:
+
+- Ubuntu 22.04
+- Python 3.9.13
+- PyTorch 2.5.0
+- CUDA 12.4
+- NVIDIA RTX A6000
+- Intel Xeon Platinum 8488C
+
+## Usage
+
+### Reproduce the results of the paper
 ```sh
-git clone https://github.com/suiguochong/DSE-DDIM.git
-cd Unicos/
+python methods_contrast.py --method DDIM --candidate_N 64
+```
+method: 'DDIM', 'DDPM', 'GA', 'GA_small', 'GA_large', 'MLP', 'Random'
+
+### Retrain the DDIM
+The training dataset be downloaded from the repository release files.
+```sh
+python stage_2.py
+```
+
+## Citation
+
+If you find this work useful, please consider citing our paper:
+```bibtex
+@inproceedings{DSE-DDIM,
+  title     = {Learning and Exploring the Hardware Dataflow Design Space through DDIM},
+  author    = {XXX},
+  booktitle = {PRICAI},
+  year      = {2026}
+}
 ```
