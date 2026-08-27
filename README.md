@@ -25,7 +25,7 @@ python methods_contrast.py --method DDIM --candidate_N 64
 method: 'DDIM', 'DDPM', 'GA', 'GA_small', 'GA_large', 'MLP', 'Random'
 
 ### Retrain the DDIM
-The training dataset be downloaded from the repository release files.
+The training dataset can be downloaded from the repository release files.
 ```sh
 python stage_2.py
 ```
