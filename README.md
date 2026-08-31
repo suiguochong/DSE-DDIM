@@ -29,15 +29,3 @@ The training dataset can be downloaded from the repository release files.
 ```sh
 python stage_2.py
 ```
-
-## Citation
-
-If you find this work useful, please consider citing our paper:
-```bibtex
-@inproceedings{DSE-DDIM,
-  title     = {Learning and Exploring the Hardware Dataflow Design Space through DDIM},
-  author    = {XXX},
-  booktitle = {PRICAI},
-  year      = {2026}
-}
-```
